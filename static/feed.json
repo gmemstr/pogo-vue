@@ -1,0 +1,41 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Pogo Test Feed",
+  "home_page_url": "http://localhost:3000",
+  "description": "Discussion about open source projects on the internet.",
+  "author": {
+    "name": "Gabriel Simmer"
+  },
+  "items": [
+    {
+      "id": "0",
+      "url": "http://localhost:3000/download/2017-08-27_Machine Learning.mp3",
+      "title": "Machine Learning",
+      "summary": "boop",
+      "date_published": "2017-08-27T00:00:00Z",
+      "author": {
+        "name": "Gabriel Simmer"
+      }
+    },
+    {
+      "id": "1",
+      "url": "http://localhost:3000/download/2017-10-08_Testing.mp3",
+      "title": "Testing",
+      "summary": "TEST with Time Allen",
+      "date_published": "2017-10-08T00:00:00Z",
+      "author": {
+        "name": "Gabriel Simmer"
+      }
+    },
+    {
+      "id": "2",
+      "url": "http://localhost:3000/download/2017-11-21_Keyboard Comparison.mp3",
+      "title": "Keyboard Comparison",
+      "summary": "Hello, world! this is a keyboard comparison!",
+      "date_published": "2017-11-21T00:00:00Z",
+      "author": {
+        "name": "Gabriel Simmer"
+      }
+    }
+  ]
+}
