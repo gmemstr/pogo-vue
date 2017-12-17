@@ -1,9 +1,7 @@
 <template>
   <div class="hello" v-if="loaded">
-    <h1>{{ data.title }}</h1>
-      <div v-for="episode in data['items']">
-        <h3><router-link :to="'e/'+episode.id">{{ episode.title }}</router-link></h3>
-        <p>{{ episode.summary }}</p>
+    <h1>{{ episode.title }}</h1>
+    <p>{{ episode.summary }}</p>
         <audio controls="controls" preload="none">
           Your browser doesn't support the audio tag!
           <source :src="episode.url">
@@ -17,17 +15,18 @@ export default {
   name: 'EpisodeList',
   data () {
     return {
-      data: {},
+      episode: {},
       loaded: false
     }
   },
   created () {
-    this.getFeed()
+    this.getEp()
   },
   methods: {
-    getFeed () {
+    getEp () {
       getFeed(data => {
-        this.data = data
+        this.episode = data['items'][this.$route.params.id]
+        console.log(this.episode.title)
         this.loaded = true
       })
     }
