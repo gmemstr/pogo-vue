@@ -41,7 +41,7 @@ function getFeed (callback) {
       callback(JSON.parse(xmlHttp.responseText))
     }
   }
-  xmlHttp.open('GET', '/static/feed.json', true)
+  xmlHttp.open('GET', '/json', true)
   xmlHttp.send()
 }
 </script>
@@ -57,8 +57,5 @@ ul {
 }
 li {
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>

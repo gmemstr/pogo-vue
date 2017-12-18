@@ -26,7 +26,7 @@ export default {
     getEp () {
       getFeed(data => {
         this.episode = data['items'][this.$route.params.id]
-        console.log(this.episode.title)
+        console.log(this.$pal)
         this.loaded = true
       })
     }
@@ -40,7 +40,7 @@ function getFeed (callback) {
       callback(JSON.parse(xmlHttp.responseText))
     }
   }
-  xmlHttp.open('GET', '/static/feed.json', true)
+  xmlHttp.open('GET', '/json', true)
   xmlHttp.send()
 }
 </script>
