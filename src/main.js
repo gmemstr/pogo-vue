@@ -21,7 +21,9 @@ Vue.mixin({
         }
         store.setItem('colourLink', colourLink)
         store.setItem('colourAccent', colourAccent)
-        location.reload()
+        if (!store.getItem('applied')) {
+          location.reload()
+        }
       } else {
         console.log(err)
       }

@@ -23,6 +23,7 @@ export default {
       if (css.styleSheet) css.styleSheet.cssText = styles
       else css.appendChild(document.createTextNode(styles))
       document.getElementsByTagName('head')[0].appendChild(css)
+      store.setItem('applied', true)
     }
   }
 }
