@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-link to="/"><img src="/assets/logo-large.png" class="logo"></router-link>
+    <a href="/admin" class="admin">Admin</a>
     <router-view/>
     <footer>
       Powered by <a href="https://pogoapp.net">Pogo</a>
@@ -30,6 +31,10 @@ export default {
 </script>
 
 <style>
+.admin {
+    position: absolute;
+    left:0;top:10vw;
+}
 .logo {
   position: absolute;
   left:0;top:0;
