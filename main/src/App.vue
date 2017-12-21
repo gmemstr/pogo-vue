@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="/"><img src="/assets/logo-large.png" class="logo"></router-link>
+    <router-link to="/"><img src="logo.png" class="logo"></router-link>
     <a href="/admin" class="admin">Admin</a>
     <router-view/>
     <footer>
@@ -11,22 +11,7 @@
 
 <script>
 export default {
-  name: 'app',
-  created () {
-    this.setStyling()
-  },
-  methods: {
-    setStyling () {
-      var store = window.localStorage
-      var css = document.createElement('style')
-      css.type = 'text/css'
-      var styles = 'a {color:' + store.getItem('colourLink') + ';} footer {background-color:' + store.getItem('colourAccent') + ';}'
-      if (css.styleSheet) css.styleSheet.cssText = styles
-      else css.appendChild(document.createTextNode(styles))
-      document.getElementsByTagName('head')[0].appendChild(css)
-      store.setItem('applied', true)
-    }
-  }
+  name: 'app'
 }
 </script>
 

@@ -8,5 +8,16 @@
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script type="text/javascript" src="./node_modules/node-vibrant/dist/vibrant.js"></script>
+    <script>
+		Vibrant.from('logo.png').getPalette().then(function(palette) {
+			var css = document.createElement('style')
+     css.type = 'text/css'
+     var styles = 'a {color:' + palette.Vibrant.getHex() + ';} footer {background-color:' + palette.DarkMuted.getHex() + ';}'
+     if (css.styleSheet) css.styleSheet.cssText = style
+     else css.appendChild(document.createTextNode(styles))
+     document.getElementsByTagName('head')[0].appendChild(css)
+		});
+    </script>
   </body>
 </html>
