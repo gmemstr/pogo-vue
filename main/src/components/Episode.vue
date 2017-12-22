@@ -2,7 +2,7 @@
   <div class="hello" v-if="loaded">
     <h1>{{ episode.title }}</h1>
     <p>{{ episode.summary }}</p>
-        <audio controls="controls" preload="none">
+        <audio controls="controls" preload="auto">
           Your browser doesn't support the audio tag!
           <source :src="episode.url">
         </audio>

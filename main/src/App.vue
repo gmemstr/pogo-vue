@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="/"><img src="logo.png" class="logo"></router-link>
+    <router-link to="/"><img src="/static/logo-large.png" class="logo"></router-link>
     <a href="/admin" class="admin">Admin</a>
     <router-view/>
     <footer>
@@ -10,9 +10,33 @@
 </template>
 
 <script>
+import Vibrant from 'node-vibrant'
+
 export default {
   name: 'app'
 }
+Vibrant.from('/static/logo-large.png').getPalette().then(function (palette) {
+// import Vibrant from 'node-vibrant'
+  var css = document.createElement('style')
+  css.type = 'text/css'
+  var vibrant = null
+  var muted = null
+  console.log(palette)
+  try {
+    vibrant = palette.Vibrant.getHex()
+  } catch (e) {
+    vibrant = palette.LightVibrant.getHex()
+  }
+  try {
+    muted = palette.Muted.getHex()
+  } catch (e) {
+    muted = palette.DarkVibrant.getHex()
+  }
+  var styles = 'a {color:' + vibrant + ';} footer {background-color:' + muted + ';color:' + vibrant + ';}'
+  if (css.styleSheet) css.styleSheet.cssText = styles
+  else css.appendChild(document.createTextNode(styles))
+  document.getElementsByTagName('head')[0].appendChild(css)
+})
 </script>
 
 <style>
