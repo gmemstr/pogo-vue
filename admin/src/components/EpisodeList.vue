@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Published Episodes</h1>
+    <h3>Published Episodes</h3>
     <div>
     <table style="width:100%">
                 <tr>
@@ -44,11 +44,9 @@ export default {
       fetch('/static/feed.json').then(response => {
         return response.text()
       }).then(blob => {
-        console.log(blob)
         this.loading = false
         var t = JSON.parse(blob).items
         for (var i = t.length - 1; i >= 0; i--) {
-          console.log(i)
           this.items.push({
             title: t[i].title,
             url: t[i].url,
@@ -60,18 +58,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-</style>

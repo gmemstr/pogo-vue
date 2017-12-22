@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Edit {{episode.title}}</h1>
+    <h3>Edit {{episode.title}}</h3>
         <form enctype="multipart/form-data" action="/admin/edit" method="post">
         <label for="title">Episode Title</label>
         <input type="text" id="title" name="title" :value="episode.title">
@@ -61,18 +61,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-</style>

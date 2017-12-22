@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <h1>Publish Episode</h1>
-    <div>
     <h3>Publish Episode</h3>
+    <div>
     <form enctype="multipart/form-data" action="/admin/publish" method="post" class="publish">
         <label for="title">Episode Title</label>
         <input type="text" id="title" name="title">
@@ -28,18 +27,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-</style>
