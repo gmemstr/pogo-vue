@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Publish from '@/components/Publish'
+import EpisodeList from '@/components/EpisodeList'
 
 Vue.use(Router)
 
@@ -8,8 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Publish',
+      component: Publish
+    },
+    {
+      path: '/manage',
+      name: 'EpisodeList',
+      component: EpisodeList
     }
   ]
 })
