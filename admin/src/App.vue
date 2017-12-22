@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <h1>Pogo LAUNCHPAD</h1>
     <nav>
       <router-link to="/" tag="button">Publish</router-link>
       <router-link to="/manage" tag="button">Episodes</router-link>
-      <router-link to="/theme" tag="button">Theme</router-link>
       <router-link to="/users" tag="button">Users</router-link>
       <button onclick="logout()">Logout</button>
     </nav>
+    <h1>Pogo LAUNCHPAD</h1>
     <router-view/>
   </div>
 </template>
