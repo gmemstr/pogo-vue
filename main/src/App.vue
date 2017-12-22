@@ -23,9 +23,9 @@ Vibrant.from('/static/logo-large.png').getPalette().then(function (palette) {
   var muted = null
   console.log(palette)
   try {
-    vibrant = palette.Vibrant.getHex()
-  } catch (e) {
     vibrant = palette.LightVibrant.getHex()
+  } catch (e) {
+    vibrant = palette.Vibrant.getHex()
   }
   try {
     muted = palette.Muted.getHex()
