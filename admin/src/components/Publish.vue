@@ -19,11 +19,6 @@
 
 <script>
 export default {
-  name: 'Publish',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'Publish'
 }
 </script>

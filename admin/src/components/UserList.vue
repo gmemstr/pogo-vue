@@ -2,18 +2,21 @@
   <div class="hello">
     <h3>Published Episodes</h3>
     <div>
-    <table style="width:100%">
-      <tr>
-          <th>Title</th>
-          <th>URL</th>
-          <th></th>
-      </tr>
-      <tr v-for="item in items">
-          <td>{{ item.id }}: {{ item.title }}</td>
-          <td>{{ item.url }}</td>
-          <td><router-link class="button" :to="'edit/' + item.id">Edit</router-link></td>
-      </tr>
-      </table>
+    <router-link :to="'users/new'" tag="button">New</router-link>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+        <tr v-for="item in items">
+            <td>{{ item.username }}</td>
+            <td>{{ item.email }}</td>
+            <td>
+                <router-link :to="'user/' + item.id" class="button">Edit</router-link>
+            </td>
+        </tr>
+    </table>
       </div>
     </div>
   </div>
@@ -21,11 +24,11 @@
 
 <script>
 export default {
-  name: 'EpisodeList',
+  name: 'UserList',
   data () {
     return {
       loading: false,
-      items: null,
+      users: {},
       error: null
     }
   },
@@ -43,16 +46,16 @@ export default {
       this.error = this.items = []
       this.loading = true
 
-      fetch('/static/feed.json').then(response => {
+      fetch('/admin/listusers').then(response => {
         return response.text()
       }).then(blob => {
         this.loading = false
-        var t = JSON.parse(blob).items
+        var t = JSON.parse(blob).reverse()
         for (var i = t.length - 1; i >= 0; i--) {
           this.items.push({
-            title: t[i].title,
-            url: t[i].url,
-            id: t[i].id
+            id: t[i].id,
+            username: t[i].username,
+            email: t[i].email
           })
         }
       })
