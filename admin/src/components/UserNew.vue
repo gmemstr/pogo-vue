@@ -22,5 +22,7 @@
   </div>
 </template>
 <script>
-
+export default {
+  name: 'UserNew'
+}
 </script>

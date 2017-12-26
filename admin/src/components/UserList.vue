@@ -2,7 +2,7 @@
   <div class="hello">
     <h3>Published Episodes</h3>
     <div>
-    <router-link :to="'users/new'" tag="button">New</router-link>
+    <router-link :to="'newuser/'" tag="button">New</router-link>
     <table>
         <tr>
             <th>Username</th>
