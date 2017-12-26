@@ -6,4 +6,4 @@ This repository holds the source code for the new Vue.js-based webapps for Pogo'
 
  - `main/` is the client frontend for perusing the feed and listening to episodes.
 
- If on Windows, you can run `build.bat` to automagically build and aggregate the files into `dist\` in the root.
+You can run the `build.bat`/`build.sh` script (dependant on your OS) to automatically build the entire frontend for production.
