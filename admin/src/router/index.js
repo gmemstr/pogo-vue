@@ -5,6 +5,7 @@ import EpisodeList from '@/components/EpisodeList'
 import EpisodeEdit from '@/components/EpisodeEdit'
 import UserList from '@/components/UserList'
 import UserEdit from '@/components/UserEdit'
+import UserNew from '@/components/UserNew'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/user/:id',
       name: 'UserEdit',
       component: UserEdit
+    },
+    {
+      path: '/user/new',
+      name: 'UserNew',
+      compoenent: UserNew
     }
   ]
 })
