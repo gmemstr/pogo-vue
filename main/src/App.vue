@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-link to="/"><img src="/static/logo-large.png" class="logo"></router-link>
-    <a href="/admin" class="admin">Admin</a>
+    <router-link to="login" class="admin">Admin</router-link>
     <router-view/>
     <footer>
       Powered by <a href="https://pogoapp.net">Pogo</a>
