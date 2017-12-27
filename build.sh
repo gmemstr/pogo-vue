@@ -3,6 +3,7 @@
 if [ ! -d "dist" ]; then
 	mkdir dist
 fi
+rm -rf dist/*
 echo Building admin
 cd admin
 npm run build
