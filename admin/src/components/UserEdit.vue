@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" v-if="!loading">
     <h3>Edit User</h3>
         <form enctype="multipart/form-data" action="/admin/edituser" method="post">
         <label for="username">Username</label>
@@ -34,28 +34,28 @@ export default {
   name: 'UserEdit',
   data () {
     return {
-      loading: false,
-      user: null,
+      loading: true,
+      user: [],
       error: null
     }
   },
   created () {
-    this.featchData()
+    this.fetchData()
   },
   watch: {
     '$route': 'fetchData'
   },
   methods: {
     fetchData () {
-      this.error = this.user = []
-
-      fetch('/admin/listusers').then(response => {
+      fetch('/admin/listusers', {
+        credentials: 'same-origin'
+      }).then(response => {
         return response.text()
       }).then(blob => {
         this.loading = false
         var t = JSON.parse(blob)
         for (var i = t.length - 1; i >= 0; i--) {
-          if (t[i].id === this.$route.params.id) {
+          if (parseInt(t[i].id) === parseInt(this.$route.params.id)) {
             this.user = {
               id: t[i].id,
               username: t[i].username,

@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       loading: false,
-      users: {},
+      items: {},
       error: null
     }
   },
@@ -46,9 +46,12 @@ export default {
       this.error = this.items = []
       this.loading = true
 
-      fetch('/admin/listusers').then(response => {
+      fetch('/admin/listusers', {
+        credentials: 'same-origin'
+      }).then(response => {
         return response.text()
       }).then(blob => {
+        console.log(blob)
         this.loading = false
         var t = JSON.parse(blob).reverse()
         for (var i = t.length - 1; i >= 0; i--) {
