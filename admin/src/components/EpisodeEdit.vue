@@ -37,7 +37,9 @@ export default {
       this.error = this.items = []
       this.loading = true
 
-      fetch('/static/feed.json').then(response => {
+      fetch('/static/feed.json', {
+        credentials: 'same-origin'
+      }).then(response => {
         return response.text()
       }).then(blob => {
         this.loading = false
