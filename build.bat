@@ -1,7 +1,8 @@
 @echo off
 REM This script will build then aggregating the dist files for the two directories into one for release - WINDOWS
 IF EXIST dist (
-	echo Final dist folder found
+	echo Final dist folder found, clearing
+	del dist\* /q /s
 ) ELSE (
 	echo Creating dist folder
 	mkdir dist
