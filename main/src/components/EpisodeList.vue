@@ -29,6 +29,7 @@ export default {
       getFeed(data => {
         this.data = data
         this.loaded = true
+        document.title = data.title
       })
     }
   }

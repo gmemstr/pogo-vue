@@ -28,6 +28,7 @@ export default {
         this.episode = data['items'][this.$route.params.id]
         console.log(this.$pal)
         this.loaded = true
+        document.title = data.title
       })
     }
   }
