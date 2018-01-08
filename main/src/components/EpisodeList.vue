@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" v-if="loaded">
+  <div class="app" v-if="loaded">
     <h1>{{ data.title }}</h1>
       <div v-for="episode in data['items']">
         <h3><router-link :to="'e/'+episode.id">{{ episode.title }}</router-link></h3>

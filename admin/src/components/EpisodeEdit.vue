@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="app">
     <h3>Edit {{episode.title}}</h3>
         <form enctype="multipart/form-data" action="/admin/edit" method="post">
         <label for="title">Episode Title</label>

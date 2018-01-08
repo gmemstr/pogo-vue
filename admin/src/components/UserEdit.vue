@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" v-if="!loading">
+  <div class="app" v-if="!loading">
     <h3>Edit User</h3>
         <form enctype="multipart/form-data" action="/admin/edituser" method="post">
         <label for="username">Username</label>

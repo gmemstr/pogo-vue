@@ -1,5 +1,5 @@
 <template>
-<div class="hello">
+<div class="app">
     <h3>New User</h3>
         <form enctype="multipart/form-data" action="/admin/adduser" method="post">
         <label for="username">Username</label>

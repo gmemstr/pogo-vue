@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" v-if="loaded">
+  <div class="app" v-if="loaded">
     <h1>{{ episode.title }}</h1>
     <p>{{ episode.summary }}</p>
         <audio controls="controls" preload="auto">

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="app">
     <h3>Published Episodes</h3>
     <div>
     <table style="width:100%">

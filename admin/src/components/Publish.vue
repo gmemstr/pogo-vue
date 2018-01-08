@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="app">
     <h3>Publish Episode</h3>
     <div>
     <form enctype="multipart/form-data" action="/admin/publish" method="post" class="publish">

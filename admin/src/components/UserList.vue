@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="app">
     <h3>Published Episodes</h3>
     <div>
     <router-link :to="'/users/new/'" tag="button">New</router-link>

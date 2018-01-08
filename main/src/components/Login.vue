@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="app">
 		<h3>Login to Pogo LAUNCHPAD</h3>
 			<form action="login" method="post" class="setupform">
 				<label for="username">Username</label>
