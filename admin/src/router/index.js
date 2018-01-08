@@ -6,6 +6,7 @@ import EpisodeEdit from '@/components/EpisodeEdit'
 import UserList from '@/components/UserList'
 import UserEdit from '@/components/UserEdit'
 import UserNew from '@/components/UserNew'
+import Settings from '@/components/Settings'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/users/new',
       name: 'UserNew',
       component: UserNew
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: Settings
     }
   ]
 })

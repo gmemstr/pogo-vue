@@ -4,6 +4,7 @@
       <router-link to="/" tag="button">Publish</router-link>
       <router-link to="/manage" tag="button">Episodes</router-link>
       <router-link to="/users" tag="button">Users</router-link>
+      <router-link to="/settings" tag="button">Settings</router-link>
       <button onclick="document.cookie = 'POGO_SESSION=;expires=Thu, 01 Jan 1970 00:00:01 GMT';window.location = '/'">Logout</button>
     </nav>
     <h1>Pogo LAUNCHPAD</h1>
