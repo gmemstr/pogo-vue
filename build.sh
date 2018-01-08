@@ -8,12 +8,12 @@ echo Building admin
 cd admin
 npm run build
 echo Copying admin files
-cp dist ../dist
+cp -r dist/* ../dist
 cd ..
 cd main
 echo Building main
 npm run build
 echo Copying main files
-cp dist ../dist
+cp -r dist/* ../dist
 cd ..
 echo Done
