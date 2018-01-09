@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="/"><img src="/static/logo-large.png" class="logo"></router-link>
+    <router-link to="/"><img src="/static/podcastimage.png" class="logo"></router-link>
     <router-link to="login" class="admin">Admin</router-link>
     <router-view/>
     <footer>
@@ -15,7 +15,7 @@ import Vibrant from 'node-vibrant'
 export default {
   name: 'app'
 }
-Vibrant.from('/static/logo-large.png').getPalette().then(function (palette) {
+Vibrant.from('/static/podcastimage.png').getPalette().then(function (palette) {
 // import Vibrant from 'node-vibrant'
   var css = document.createElement('style')
   css.type = 'text/css'
